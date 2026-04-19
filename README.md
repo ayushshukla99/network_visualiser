@@ -35,10 +35,7 @@ Whether you're debugging your network, monitoring usage, or checking for unautho
 
 ## 🎥 Demo
 
-<p align="center">
-  <img src="docs/demo.gif" width="700"/>
-</p>
-
+![Demo](docs/demo/demo.gif)
 ---
 
 ## ⚙️ How It Works
