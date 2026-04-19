@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Network Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Device')">📱 Devices</button>
+        <button onclick="filterCategory('Router')">🌐 Router</button>
+        <button onclick="filterCategory('Other')">🔧 Other</button>
+    </div>
+
+
+
+    <div class="container">
+        <div class="scan-area">
+            <div class="scan-button-wrapper">
+                <button id="scanBtn" class="scan-button">Scan</button>
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring second"></div>
+            </div>
+            <div id="devicesContainer" class="device-circle-container"></div>
+        </div>
+
+        <div class="info-area">
+            <div id="stats">
+                <div class="stat-card">📊 Scan Time: <span id="scanTime">--</span> sec</div>
+                <div class="stat-card">📤 Sent: <span id="bytesSent">--</span></div>
+                <div class="stat-card">📥 Received: <span id="bytesRecv">--</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="detailPanel" class="detail-panel">
+        <button class="close-btn" onclick="closeDetailPanel()">×</button>
+        <div id="detailContent"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
